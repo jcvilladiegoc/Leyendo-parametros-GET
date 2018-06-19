@@ -5,8 +5,8 @@
  */
 class parametro {
     constructor(key, value){
-        this.value = value;
         this.key = key;
+        this.value = value;
     }
 }
 
@@ -52,5 +52,15 @@ class GET_PARAMETERS {
 var GET = new GET_PARAMETERS();
 
 window.onload = function () {
-    document.getElementById('datos').innerHTML = ''.concat(JSON.stringify(GET));
+    datos.innerHTML = ''.concat(JSON.stringify(GET));
+    form.onsubmit = function () {
+        resultado.innerHTML = GET.get(key.value);
+        key.focus();
+        return false;
+    };
+    key.addEventListener('keyup', function () {
+        if (event.keyCode == 13) {
+            form.onsubmit();
+        }
+    });
 }

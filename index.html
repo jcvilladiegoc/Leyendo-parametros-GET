@@ -10,8 +10,17 @@
 </head>
 <body>
     <h2> Variables GET </h2>
-    <div id="datos">
+    <div id="datos"></div>
 
+    <h3>Obteniendo variables GET</h3>
+    <form action="#" id="form">
+        <label for="key"> Key </label>
+        <input type="text" name="key" id="key" onkeyup="keyPress.textContent=key.value">
+        <input type="submit">
+    </form>
+    <div id="mensaje">
+        <strong>Key: </strong> <span id="keyPress">key</span> <br>
+        <strong>Resultado: </strong> <span id="resultado">value</span>
     </div>
 </body>
 </html>
