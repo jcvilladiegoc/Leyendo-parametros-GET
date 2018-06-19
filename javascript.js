@@ -43,6 +43,14 @@ class GET_PARAMETERS {
         }
         
     }
+
+    get valided(){
+        return this.valid;
+    }
 }
 
 var GET = new GET_PARAMETERS();
+
+window.onload = function () {
+    document.getElementById('datos').innerHTML = ''.concat(JSON.stringify(GET));
+}
