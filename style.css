@@ -1,0 +1,14 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#datos{
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: antiquewhite;
+}
+
+#form, #mensaje{
+    padding: 10px 0px;
+}
