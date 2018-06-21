@@ -54,7 +54,7 @@ var GET = new GET_PARAMETERS();
 window.onload = function () {
     datos.innerHTML = ''.concat(JSON.stringify(GET));
     form.onsubmit = function () {
-        resultado.innerHTML = GET.get(key.value);
+        resultado.innerHTML = window.decodeURIComponent(GET.get(key.value));
         key.focus();
         return false;
     };
