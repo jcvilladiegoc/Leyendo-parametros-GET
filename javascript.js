@@ -63,4 +63,20 @@ window.onload = function () {
             form.onsubmit();
         }
     });
+    nameVariable.onkeyup = function (event) {
+        if (event.keyCode == 13) {
+            createVariables();
+        }
+    };
+}
+
+function createVariables() {
+    tbody = '';
+    tbody += '<tr>';
+    tbody += '<td class="capitalize"> <label for="' + nameVariable.value +'-p"> ' + nameVariable.value + ' </label> </td>';
+    tbody += '<td>' + '<input type="text" id="' + nameVariable.value + '-p" name="' + nameVariable.value + '" placeholder="Ingresa el valor" required class="delete-border p-5" />' + '</td>';
+    tbody += '</tr>';
+    tbodyElement.innerHTML += tbody;
+    nameVariable.value = '';
+    nameVariable.focus();
 }

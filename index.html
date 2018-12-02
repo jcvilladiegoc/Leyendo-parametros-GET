@@ -10,17 +10,41 @@
 </head>
 <body>
     <h2> Variables GET </h2>
-    <div id="datos"></div>
+    <div id="datos"> </div>
 
     <h3>Obteniendo variables GET</h3>
     <form action="#" id="form">
         <label for="key"> Key </label>
         <input type="text" name="key" id="key" onkeyup="keyPress.textContent=key.value">
-        <input type="submit">
+        <input type="submit" value="Consultar">
     </form>
     <div id="mensaje">
         <strong>Key: </strong> <span id="keyPress">key</span> <br>
         <strong>Resultado: </strong> <span id="resultado">value</span>
     </div>
+    <h2>
+        Envía tus propios parametros GETs
+    </h2>
+    <p>
+        <strong> Nombre de la variable </strong>
+        <br>
+        <input id="nameVariable" type="text" placeholder="Ingresa el nombre de la variable" class="input-text mt-10">
+        <button onclick="createVariables()">Agregar</button>
+    </p>
+    <form id="dataSend" method="GET">
+        <table>
+            <thead>
+                <tr>
+                    <th> Nombre </td>
+                    <th> Valor </td>
+                </tr>
+            </thead>
+            <tbody id="tbodyElement">
+        
+            </tbody>
+        </table>
+        <br>
+        <input type="submit" value="Enviar datos">
+    </form>
 </body>
 </html>
